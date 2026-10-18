@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>UsdtCash</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <div class="glow-bg"></div>
+    <div class="brand">
+      <div class="brand-mark">₮</div>
+      <div class="brand-text">UsdtCash</div>
+    </div>
+    <header class="top-bar">
+      <div class="user-info">
+        <div class="avatar" id="avatar">?</div>
+        <div>
+          <div class="greeting" id="greeting">Halo</div>
+          <div class="username" id="username">@user</div>
+        </div>
+      </div>
+      <div class="streak-pill"><span class="flame">🔥</span><span id="streak">0</span></div>
+    </header>
+    <nav class="tabs">
+      <button class="tab active" data-tab="home">Beranda</button>
+      <button class="tab" data-tab="history">Riwayat</button>
+    </nav>
+    <div id="tab-home">
+      <section class="balance-card">
+        <div class="balance-label">TOTAL SALDO</div>
+        <div class="balance-value"><span id="balance">0.00000000</span> <span class="currency">USDT</span></div>
+        <div class="balance-sub" id="balanceSub">Minimal withdraw 2 USDT</div>
+      </section>
+      <section class="quick-actions">
+        <button class="action-btn checkin" id="checkinBtn">
+          <span class="action-icon">📅</span><span class="action-label">Check-in</span><span class="action-status" id="checkinStatus">Siap</span>
+        </button>
+        <button class="action-btn invite" id="inviteBtn">
+          <span class="action-icon">👥</span><span class="action-label">Undang</span><span class="action-status" id="inviteStatus">0/2</span>
+        </button>
+      </section>
+      <section class="ads-section">
+        <div class="section-header"><h2>Tonton Iklan</h2><div class="ads-progress" id="adsProgress">0 / 30</div></div>
+        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+        <div class="reward-info" id="rewardInfo">+0.0000015 USDT/iklan</div>
+        <button class="watch-btn" id="watchBtn"><span class="play-icon">▶</span>Tonton Iklan</button>
+      </section>
+      <section class="withdraw-section">
+        <h2>Withdraw USDT</h2>
+        <input type="text" id="walletInput" class="wallet-input" placeholder="Alamat wallet USDT (TRC20)">
+        <button class="withdraw-btn" id="withdrawBtn">Tarik Saldo</button>
+        <div class="withdraw-note" id="withdrawNote">Minimal 2 USDT + 2 invite</div>
+      </section>
+    </div>
+    <div id="tab-history" class="hidden">
+      <div class="history-list" id="historyList"><div class="empty">Memuat...</div></div>
+    </div>
+    <div class="toast" id="toast"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
